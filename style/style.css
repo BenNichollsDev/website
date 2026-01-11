@@ -12,7 +12,7 @@ html, body {
 
 body {
     font-family: Montserrat;
-    background-color: rgb(55, 46, 68);
+    background-color: rgb(138, 94, 54);
     display: flex;
     flex-direction: column;
 }
@@ -62,6 +62,8 @@ p,
 label,
 li a {
     color: white;
+    text-align: justify;
+    hyphens: auto;
 }
 
 p,
@@ -180,6 +182,11 @@ footer span {
     grid-area: project_div_4;
 }
 
+/* .page_project main > :only-child {
+    margin-left: auto;
+    margin-right: auto;
+} */
+
 /* .page_project footer {
     margin-top: 4em;
     position: static;
@@ -234,93 +241,3 @@ footer span {
         "form_entry_area"
     ;
 }
-
-/*--------------------VIDEO DEMO STYLE--------------------*/
-
-.page_video_demo {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "nav"
-        "header"
-        "main"
-        "footer"
-    ;
-}
-
-.page_video_demo header {
-    margin-bottom: 2vw;
-}
-
-.page_video_demo header h1 {
-    font-size: calc(3em + 2vw);
-    text-align: center;
-}
-
-.page_video_demo main {
-    margin: 0 auto;
-}
-
-/*--------------------SITE REPORT STYLE--------------------*/
-
-.page_site_report {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "nav"
-        "header"
-        "main"
-        "footer"
-    ;
-}
-
-.page_site_report .div_p_site_report {
-    grid-area: div_p_site_report;
-}
-
-.page_site_report .div_img_validation {
-    margin-top: 4em;
-    grid-area: div_img_validation;
-}
-
-.page_site_report main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "div_p_site_report"
-        "div_img_validation"
-    ;
-}
-
-.page_site_report header {
-    margin-bottom: 2vw;
-}
-
-.page_site_report header h1 {
-    font-size: calc(3em + 2vw);
-    text-align: center;
-}
-
-.page_site_report p {
-    margin-left: 8vw;
-    margin-right: 8vw;
-    text-align: center;
-}
-
-.page_site_report img {
-    /* margin: 0 auto; */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 50vw;
-}
-
-/* .page_site_report footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-} */
