@@ -1,0 +1,161 @@
+/*--------------------GENERAL STYLE--------------------*/
+
+/* body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "footer"
+        ;
+} */
+
+nav {
+    margin-bottom: 4vw;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    /* justify-content: center; */
+    /* text-align: center; */
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    /* margin-left: 1vw;
+    margin-right: 1vw; */
+}
+
+nav ul li a {
+    font-size: 1.25em;
+}
+
+footer {
+    /* margin-top: calc(clamp(6em, 10vw, 12em) / 1); */
+}
+
+/*--------------------INDEX STYLE--------------------*/
+
+.page_index {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav nav"
+        "header aside"
+        "section section"
+        "main main"
+        "footer footer"
+    ;
+}
+
+.page_index .nav_seperator {
+    margin-bottom: 6em;
+}
+
+.page_index header {
+    max-height: fit-content;
+    display: flex;
+    align-items: center;
+
+    margin-left: 12vw;
+    margin-left: clamp(12.5%, 22.5vw, 30%);
+}
+
+.page_index header h1 {
+    font-size: clamp(2em, 7vw, 7.5em);
+    display: flex;
+    text-align: left;
+}
+
+.page_index header h2 {
+    font-size: clamp(1.5em, 6vw, 5em);
+    display: flex;
+    text-align: left;
+}
+
+.page_index .mobile_p {
+    display: none;
+}
+
+/*POSSIBLY REMAKE HEADER AND NAV ALIGNMENTS IN THE FUTURE WHEN EVERYTHING ELSE IS DONE*/
+
+.page_index aside {
+    max-height: fit-content;
+    display: flex;
+    align-items: center;
+
+    margin-left: clamp(6.25%, 15vw, 30%);
+    margin-right: 8vw;
+}
+
+.page_index aside img {
+    max-width: clamp(90%, 25vw, 100%);
+    border-radius: 50%;
+    box-shadow: 15px 5px 1px 10px rgba(0, 0, 0, 0.15),
+        30px 10px 1px 20px rgba(0, 0, 0, 0.1),
+        45px 15px 1px 30px rgba(0, 0, 0, 0.05);
+}
+
+.page_index p {
+    font-size: clamp(1.125em, 1.5vw, 1.75em);
+}
+
+/*--------------------PROJECT STYLE--------------------*/
+
+.page_project main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "project_div_1 project_div_2"
+        "project_div_3 project_div_4"
+    ;
+
+    height: max-content;
+}
+
+.page_project .project_div_1 img,
+.page_project .project_div_2 img,
+.page_project .project_div_3 img,
+.page_project .project_div_4 img {
+    max-width: 25vw;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+/*--------------------CONTACT STYLE--------------------*/
+
+/* .page_contact main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "main_text main_text"
+        "form_entry_area form_entry_area"
+    ;
+} */
+/* CONTINUE FROM HERE, NEED TO IMPLEMENT THESE GRID AREAS INTO THE HTML */
+
+.page_contact form {
+    margin-left: 4vw;
+    margin-right: 4vw;
+    grid-area: form_entry_area;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0 auto;
+    row-gap: 1em;
+    width: 500px;
+}
+
+.page_contact input[type="submit"] {
+    grid-column: 2;
+}
+
+/*--------------------VIDEO DEMO STYLE--------------------*/
+
+
+/*--------------------SITE REPORT STYLE--------------------*/

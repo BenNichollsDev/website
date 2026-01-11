@@ -1,0 +1,257 @@
+/*--------------------GENERAL STYLE--------------------*/
+
+nav {
+    /* display: none; */
+    display: block;
+    background-color: rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 50%;
+    height: 100vh;
+    z-index: 4;
+    transition: left 0.2s;
+}
+
+/* nav::before {
+    left: 100%;
+} */
+
+#clicked:target nav {
+    left: 50%;
+}
+
+.behind_nav_mobile {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 50%;
+    height: 100vh;
+    z-index: 3;
+    transition: left 0.2s;
+}
+
+#clicked:target .behind_nav_mobile {
+    left: 0%;
+}
+
+.show_nav_mobile {
+    height: calc(0.8em + 2vw);
+    width: calc(1.25em + 2vw);
+    position: fixed;
+    border-top: calc(0.2em + 0.2vw) solid #ffffff;
+    border-bottom: calc(0.2em + 0.2vw) solid #ffffff;
+    margin: 1em;
+    border-radius: 0.05em;
+    z-index: 5;
+}
+
+.show_nav_mobile::before {
+    content: '';
+    position: absolute;
+    width: calc(1.25em + 2vw);
+    margin-top: calc(0.3em + 1vw);
+    border-top: calc(0.2em + 0.2vw) solid #ffffff;
+}
+
+/* nav:target {
+    display: block;
+} */
+
+#clicked .clicked_false {
+    display: none;
+}
+
+#clicked .clicked_true {
+    display: block;
+}
+
+#clicked:target .clicked_false {
+    display: block;
+}
+
+#clicked:target .clicked_true {
+    display: none;
+}
+
+/* #clicked:target {
+    display: block;
+} */
+
+header {
+    margin-top: calc(1.6em + 4vw);
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 1em;
+}
+
+nav ul li a {
+    font-size: clamp(0.75em, 4vw, 1.125em);
+    /* padding: 0em;
+    margin: 1em; */
+}
+
+/* header div p {
+    display: flex;
+} */
+
+/* footer {
+    margin-top: 12vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} */
+
+/*--------------------INDEX STYLE--------------------*/
+
+.page_index {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav"
+        /* "nav_mobile_container" */
+        "header"
+        "aside"
+        "section"
+        "main"
+        "footer"
+        ;
+}
+
+.nav_mobile_container {
+    
+}
+
+.page_index header {
+    margin-top: 12vw;
+}
+
+.page_index header h1 {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    font-size: clamp(2.5em, 10vw, 4em);
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+
+.page_index header h2 {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    font-size: clamp(1.5em, 7vw, 3em);
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.page_index aside img {
+    /* max-width: calc(100%); */
+    /* max-width: clamp(90%, 100%, 100%); */
+    /* max-width: 100%; */
+    /* width: 800px; */
+    /* max-width: clamp(60%, 5vw, 60%); */
+    max-width: calc(45%);
+    /* width: 37.5vw; */
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    box-shadow: 7.5px 2.5px 1px 5px rgba(0, 0, 0, 0.15),
+        15px 5px 1px 10px rgba(0, 0, 0, 0.1),
+        22.5px 7.5px 1px 15px rgba(0, 0, 0, 0.05);
+}
+
+.page_index .desktop_p {
+    display: none;
+}
+
+.page_index p {
+    font-size: clamp(1em, 3.5vw, 2em);
+    /* font-size: 1em; */
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-left: 9vw;
+    margin-right: 9vw;
+}
+
+/*--------------------PROJECT STYLE--------------------*/
+
+.page_project header {
+    
+}
+
+.page_project main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "project_div_1"
+        "project_div_2"
+        "project_div_3"
+        "project_div_4"
+    ;
+
+    height: max-content;
+}
+
+.page_project .project_div_1 img,
+.page_project .project_div_2 img,
+.page_project .project_div_3 img,
+.page_project .project_div_4 img {
+    max-width: 50vw;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+/*--------------------CONTACT STYLE--------------------*/
+
+/* .page_contact p {
+    white-space: normal;
+    word-break: break-all;
+} */
+
+.page_contact form {
+    margin-left: 4vw;
+    margin-right: 4vw;
+    grid-area: form_entry_area;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin: 0 auto;
+    row-gap: 1em;
+    width: 200px;
+}
+
+.page_contact form label {
+    text-align: center;
+}
+
+.page_contact input[type="submit"] {
+    grid-column: 1;
+}
+
+/*--------------------VIDEO DEMO STYLE--------------------*/
+
+.page_video_demo main {
+    max-width: fit-content;
+}
+
+.page_video_demo main iframe {
+    max-width: 80vw;
+    min-width: 250px;
+}
+
+/*--------------------SITE REPORT STYLE--------------------*/
+
