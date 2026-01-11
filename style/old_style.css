@@ -1,0 +1,326 @@
+/*--------------------GENERAL STYLE--------------------*/
+/*https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span check obselete stuff here*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    font-family: Montserrat;
+    background-color: rgb(55, 46, 68);
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    grid-area: nav;
+}
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: aside;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    /* position: absolute; */
+    bottom: 0;
+    width: 100%;
+    margin-top: 10vh;
+}
+
+nav ul li a {
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.2s, color 0.2s;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; MAKE THIS ANIMATED FOR WHEN IT'S HOVERED*/
+}
+
+nav ul li a:hover {
+    /* padding: 1em; */
+    background-color: rgb(255, 255, 255, 1);
+    color: rgb(55, 46, 68);
+}
+
+h1,
+h2,
+p,
+label,
+li a {
+    color: white;
+}
+
+p,
+label,
+li a {
+    font-weight: 500;
+}
+
+footer span {
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    display: block;
+}
+
+/*--------------------INDEX STYLE--------------------*/
+.page_index .div_title_text {
+    display: grid;
+}
+
+.page_index .normal_title_text {
+
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 1;
+    color: transparent;
+
+    text-shadow:
+        2px 1px 1px #111111,
+        3px 1.5px 1px #111111,
+        4px 2px 1px #111111,
+        5px 2.5px 1px #111111,
+        6px 3px 1px #111111,
+        7px 3.5px 1px #111111,
+        8px 4px 1px #111111;
+}
+
+.page_index .overlay_title_text {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 2;
+
+    /* background-image: url("../img/index_title_bg.png"); */
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: center;
+    color: transparent;
+    background-clip: text;
+    background-color: rgb(255, 255, 255);
+    /* background-image: linear-gradient(45deg, #888888 0%, #e4e4e4 50%); */
+
+    /* animation-name: move_text_background;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; */
+}
+
+/*--------------------PROJECT STYLE--------------------*/
+
+.page_project {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "footer"
+    ;
+}
+
+.page_project header {
+    margin-bottom: 2vw;
+}
+
+.page_project header h1 {
+    font-size: calc(3em + 2vw);
+    text-align: center;
+}
+
+.page_project main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.page_project .project_div_1,
+.page_project .project_div_2,
+.page_project .project_div_3,
+.page_project .project_div_4 {
+    margin-right: 6vw;
+    margin-left: 6vw;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.page_project .project_div_1 h2,
+.page_project .project_div_2 h2,
+.page_project .project_div_3 h2,
+.page_project .project_div_4 h2 {
+    text-align: center;
+}
+
+.page_project .project_div_1 {
+    grid-area: project_div_1;
+}
+
+.page_project .project_div_2 {
+    grid-area: project_div_2;
+}
+
+.page_project .project_div_3 {
+    grid-area: project_div_3;
+}
+
+.page_project .project_div_4 {
+    grid-area: project_div_4;
+}
+
+/* .page_project footer {
+    margin-top: 4em;
+    position: static;
+} */
+
+/*--------------------CONTACT STYLE--------------------*/
+
+.page_contact {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "footer"
+    ;
+}
+
+.page_contact header {
+    margin-bottom: 2vw;
+}
+
+.page_contact header h1 {
+    font-size: calc(3em + 2vw);
+    text-align: center;
+}
+
+.page_contact main {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 16vw;
+    margin-left: 16vw;
+}
+
+.page_contact .main_text {
+    margin-bottom: 2em;
+    grid-area: main_text;
+    text-align: center;
+}
+
+/* .page_contact .form_entry_area {
+    grid-area: form_entry_area;
+} */
+
+.page_contact main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "main_text"
+        "form_entry_area"
+    ;
+}
+
+/*--------------------VIDEO DEMO STYLE--------------------*/
+
+.page_video_demo {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "footer"
+    ;
+}
+
+.page_video_demo header {
+    margin-bottom: 2vw;
+}
+
+.page_video_demo header h1 {
+    font-size: calc(3em + 2vw);
+    text-align: center;
+}
+
+.page_video_demo main {
+    margin: 0 auto;
+}
+
+/*--------------------SITE REPORT STYLE--------------------*/
+
+.page_site_report {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "footer"
+    ;
+}
+
+.page_site_report .div_p_site_report {
+    grid-area: div_p_site_report;
+}
+
+.page_site_report .div_img_validation {
+    margin-top: 4em;
+    grid-area: div_img_validation;
+}
+
+.page_site_report main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "div_p_site_report"
+        "div_img_validation"
+    ;
+}
+
+.page_site_report header {
+    margin-bottom: 2vw;
+}
+
+.page_site_report header h1 {
+    font-size: calc(3em + 2vw);
+    text-align: center;
+}
+
+.page_site_report p {
+    margin-left: 8vw;
+    margin-right: 8vw;
+    text-align: center;
+}
+
+.page_site_report img {
+    /* margin: 0 auto; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50vw;
+}
+
+/* .page_site_report footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+} */
